@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="app_name">Kids Word Match</string>
+    <string name="title_activity_main">Kids Word Match</string>
+    <string name="package_name">com.vishalgupta.kidswordmatch</string>
+    <string name="custom_url_scheme">com.vishalgupta.kidswordmatch</string>
+</resources>
