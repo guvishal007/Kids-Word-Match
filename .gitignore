@@ -1,1 +1,128 @@
-node_modules
+# =============================================================================
+#  Kids Word Match — .gitignore
+#  Covers: Node/Vite, Capacitor/Android, secrets, OS junk, editor files
+# =============================================================================
+
+# -----------------------------------------------------------------------------
+# Node / npm
+# -----------------------------------------------------------------------------
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.pnp
+.pnp.js
+package-lock.json          # keep if you want reproducible installs; delete line to track it
+
+# -----------------------------------------------------------------------------
+# Vite build output
+# -----------------------------------------------------------------------------
+dist/
+dist-ssr/
+*.local
+
+# -----------------------------------------------------------------------------
+# Environment / Secrets  ⚠️  NEVER commit these
+# -----------------------------------------------------------------------------
+.env
+.env.local
+.env.*.local
+# .env.example is intentionally NOT ignored — it is the safe template
+
+# -----------------------------------------------------------------------------
+# Android — release artefacts & signing keys
+# -----------------------------------------------------------------------------
+
+# Compiled APK / AAB binaries (large; distributed via Play Store, not git)
+*.apk
+*.aab
+*.ap_
+*.aar
+
+# Android keystore / signing files  ⚠️  Contains private keys — keep out of git
+*.keystore
+*.jks
+# If you use a key.properties file for signing config, exclude it too:
+android/key.properties
+
+# Gradle build cache & generated outputs
+android/.gradle/
+android/build/
+android/app/build/
+android/captures/
+android/.externalNativeBuild/
+android/.cxx/
+
+# Android Studio / IntelliJ IDE files
+android/.idea/workspace.xml
+android/.idea/tasks.xml
+android/.idea/gradle.xml
+android/.idea/assetWizardSettings.xml
+android/.idea/dictionaries
+android/.idea/libraries
+android/.idea/caches
+android/.idea/modules.xml
+android/.idea/navEditor.xml
+android/**/*.iml
+android/local.properties
+
+# Capacitor-generated files synced into Android project (regenerated on cap sync)
+android/app/src/main/assets/public/
+android/app/src/main/assets/capacitor.config.json
+android/app/src/main/assets/capacitor.plugins.json
+android/app/src/main/res/xml/config.xml
+android/capacitor-cordova-android-plugins/
+
+# Dalvik / ART / Java build artefacts
+*.dex
+*.class
+*.hprof
+*.log
+
+# Proguard generated
+android/proguard/
+
+# Android navigation temp files
+android/.navigation/
+
+# fastlane CI artefacts (if used in future)
+fastlane/report.xml
+fastlane/Preview.html
+fastlane/screenshots
+fastlane/test_output
+
+# -----------------------------------------------------------------------------
+# macOS system files
+# -----------------------------------------------------------------------------
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+Icon?
+Thumbs.db
+
+# -----------------------------------------------------------------------------
+# Editor / IDE files
+# -----------------------------------------------------------------------------
+
+# VS Code
+.vscode/*
+!.vscode/extensions.json
+!.vscode/settings.json
+
+# WebStorm / IntelliJ (root level)
+.idea/
+*.iml
+
+# Vim
+*.swp
+*.swo
+*~
+
+# -----------------------------------------------------------------------------
+# Misc
+# -----------------------------------------------------------------------------
+*.local
+coverage/
+.cache/

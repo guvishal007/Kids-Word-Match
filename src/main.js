@@ -5,16 +5,17 @@ import { startConfetti, stopConfetti } from './confetti.js';
 import { AdMob, BannerAdSize, BannerAdPosition } from '@capacitor-community/admob';
 
 // Google AdMob Configuration
-// REPLACE these placeholders with your actual production keys when releasing to the Play Store
+// Keys are loaded from the .env file at build time via Vite's import.meta.env.
+// Copy .env.example → .env and fill in your real values. Never commit .env.
 const ADMOB_CONFIG = {
-  // Production AdMob App ID (Must match the ID configured in android/app/src/main/AndroidManifest.xml)
-  appId: 'ca-app-pub-1876957656481320~8951275366', 
-  
-  // Production Banner Ad Unit ID
-  bannerAdId: 'ca-app-pub-1876957656481320/2651063074', 
-  
-  // Set this to FALSE for production release to serve real ads!
-  isTesting: false
+  // Loaded from VITE_ADMOB_APP_ID in .env
+  appId: import.meta.env.VITE_ADMOB_APP_ID,
+
+  // Loaded from VITE_ADMOB_BANNER_ID in .env
+  bannerAdId: import.meta.env.VITE_ADMOB_BANNER_ID,
+
+  // Loaded from VITE_ADMOB_IS_TESTING in .env — set to "false" in production
+  isTesting: import.meta.env.VITE_ADMOB_IS_TESTING === 'true',
 };
 
 // Game State
